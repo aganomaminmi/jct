@@ -1,0 +1,15 @@
+{
+  "name": "jobcan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kohta Takanami",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "puppeteer": "^20.8.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
