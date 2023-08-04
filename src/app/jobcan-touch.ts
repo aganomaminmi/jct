@@ -10,9 +10,15 @@ if (!loginUrl || !loginUserEmail || !loginUserPassword) {
   throw new Error('Please set environment variables.')
 }
 
+let headless = true
+
+if (process.env.NODE_ENV === 'development') {
+  headless = false
+}
+
 export const runTouch = async () => {
   const browser = await puppeteer.launch({
-    headless: false, // 動作確認するためheadlessモードにしない
+    headless
   })
   const page = await browser.newPage()
 

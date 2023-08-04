@@ -1,10 +1,8 @@
-import http from "http"
-import { runTouch } from ".";
+import * as http from "http"
+import { runTouch } from "./jobcan-touch.js";
 
-const port = 3000
-
-
-const server = http.createServer(async (request, response) => {
+export const port = 3000
+export const server = http.createServer(async (request, response) => {
     response.writeHead(200, {
       "Content-Type": "text/json"
     });
@@ -25,5 +23,3 @@ const server = http.createServer(async (request, response) => {
 
 });
 
-server.listen(port);
-console.log(`The server has started and is listening on port number: ${port}`);
